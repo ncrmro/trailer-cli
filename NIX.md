@@ -154,6 +154,14 @@ When making changes to the Nix packaging:
 2. Ensure cross-platform compatibility 
 3. Update documentation as needed
 4. Test in clean environments
+5. Run `./validate-nix.sh` to verify packaging integrity
+
+The validation script checks:
+- Required files exist
+- Flake structure is correct
+- Swift dependencies are properly configured
+- Documentation is up to date
+- Git ignore patterns are set
 
 ## Support
 
