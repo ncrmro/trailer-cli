@@ -30,6 +30,32 @@ It's very hard to maintain builds for various distros, as Swift currently can't 
 ### Windows
 An experimental build is available for Windows in the [Releases](../../releases) page. It does seem to require a few DLLs to be in the same directory, which are bundled into the ZIP.
 
+### NixOS
+If you have Nix flakes enabled, you can install trailer-cli directly:
+```
+nix profile install github:ncrmro/trailer-cli
+```
+
+Or run it without installing:
+```
+nix run github:ncrmro/trailer-cli
+```
+
+For traditional Nix users (without flakes):
+```
+nix-env -i -f https://github.com/ncrmro/trailer-cli/archive/main.tar.gz
+```
+
+You can also clone the repository and build locally:
+```
+git clone https://github.com/ncrmro/trailer-cli.git
+cd trailer-cli
+nix build
+./result/bin/trailer
+```
+
+See [NIX.md](NIX.md) for detailed NixOS installation and development instructions.
+
 ### Source
 You can build the project from source using the simple `./install.sh` script. It requires Swift 5.0 or later to be installed.
 
